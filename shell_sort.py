@@ -6,7 +6,8 @@ def shell_sort(arr):
         for i in range(gap, n):
             temp = arr[i]
             j = i
-            while j >= gap and arr[j] > temp:
+          
+            while j >= gap and arr[j - gap] > temp:
                 arr[j] = arr[j - gap]
                 j -= gap
             arr[j] = temp
@@ -14,4 +15,3 @@ def shell_sort(arr):
     return arr
 
 print(shell_sort([12, 34, 54, 2, 3]))
-# Expected: [2, 3, 12, 34, 54]
